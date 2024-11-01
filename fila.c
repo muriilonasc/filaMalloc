@@ -58,7 +58,7 @@ void* removerDaFila(Fila *fila) {
 
     void *item = fila->dados[fila->inicio];
     fila->inicio = (fila->inicio + 1) % fila->capacidade;
-    fila->tamanho--;
+    fila->tamanho = fila->tamanho - 1;
 
     return item;
 }
